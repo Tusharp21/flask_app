@@ -8,7 +8,6 @@ file_path = os.path.join(os.path.dirname(__file__), 'config.json')
 
 with open(file_path,'r') as c:
     params = json.load(c)["params"]
-local_server = True
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = params['mysql_host']  # MySQL host address
@@ -19,11 +18,11 @@ mysql = MySQL(app)
 
 
 # -----------------------------------------------------------------------------------------------
-
 @app.route("/")
 def Index():
     string = "Hello World!"
     return render_template("index.html", data = string )
+
 
 # -----------------------------------------------------------------------------------------------
 @app.route("/users")
@@ -36,14 +35,13 @@ def Users():
 
 
 # -----------------------------------------------------------------------------------------------
-
 @app.route("/new_user")
 def New_user():
     
     return render_template("new_user.html" )
 
-# -----------------------------------------------------------------------------------------------
 
+# -----------------------------------------------------------------------------------------------
 @app.route("/add_user" , methods=['GET', 'POST'] )
 def add_user():
     msg = None
@@ -65,7 +63,6 @@ def add_user():
 
 
 # -----------------------------------------------------------------------------------------------
-
 @app.route("/single_user")
 def single_user():
     
@@ -109,6 +106,7 @@ def User_one(id):
         msg = "User Not Found!"
 
     return render_template("user_one.html", user_data= User_data , msg = msg)
+
 
 # -----------------------------------------------------------------------------------------------
 
