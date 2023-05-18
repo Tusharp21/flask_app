@@ -114,7 +114,7 @@ c. Write SQL queries :
 #### Outputs :
 
 - 1 home: 
-![Screenshot_20230519_025836](https://github.com/Tusharp21/flask_assignment/assets/93108145/d785f449-2545-4403-9382-a5d5203bb8fc)
+![Screenshot_20230519_025818](https://github.com/Tusharp21/flask_assignment/assets/93108145/5a894365-787b-4618-9128-3843848753ea)
 - 2 users: 
 ![Screenshot_20230519_025827](https://github.com/Tusharp21/flask_assignment/assets/93108145/887d385d-a33e-4f52-8793-63067ef2ba8c)
 - 3 one_user:
