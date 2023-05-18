@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+
+    <div class="d-flex justify-content-center align-items-center vh-100 flex-column">
+        <h3> Search User Detail By Id</h3>
+        <div class="card m-5 p-4 bg-light" >
+            <form action="/user_id" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter ID of User" 
+                    name="userid" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Find Details</button>                    
+                </div>
+            </form>
+            <span> {{msg}}</span>
+            <div class="row m-3 ">
+
+                <div class=" col-sm me-3"> 
+                    <div class="text-left">
+                        <span>ID : </span>
+                    </div>
+                    <div class="text-left">
+                        <span>Name : </span>
+                    </div>
+                    <div class="text-left">
+                        <span>Email : </span>
+                    </div>
+                    <div class="text-left">
+                        <span>Role : </span>
+                    </div>
+                </div>
+                {% if user_data %}
+                <div class=" col-sm ms-3"> 
+                    <div class="text-left">
+                        <span>{{user_data[0]}}</span>
+                    </div>
+                    <div class="text-left">
+                        <span>{{user_data[1]}}</span>
+                    </div>
+                    <div class="text-left">
+                        <span>{{user_data[2]}}</span>
+                    </div>
+                    <div class="text-left">
+                        <span>{{user_data[3]}}</span>
+                    </div>
+                </div>
+                {% else %}
+                <div class="d-flex justify-content-center align-items-center flex-column col-sm ms-3"> 
+                    <div class="text-left">
+                        <span>Loading...</span>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}
