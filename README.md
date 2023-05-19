@@ -1,7 +1,7 @@
 ## # Flask Application  Readme
 
 ####Requirements
-To run the Flask application, make sure you have the following requirements installed on your system:
+To run the Flask application, make sure following requirements installed on the system:
 
 - Python (version 3.7 or higher)
 - pip (Python package installer)
@@ -47,7 +47,9 @@ To run the Flask application, follow these steps:
 
 #### representation of the schema
 1. Users Database:
-
+```sql
+CREATE DATABASE users;
+```
 2. Users Table:
 ```sql
 CREATE TABLE users (
@@ -57,7 +59,7 @@ CREATE TABLE users (
   role VARCHAR(255)
 );
 ```
-**id** is an integer column and serves as the primary key.
+- **id** is an integer column and serves as the primary key.
 **name** is a varchar column that stores the user's name.
 **email** is a varchar column that stores the user's email address.
 **role** is a varchar column that stores the user's role or job title.
@@ -96,9 +98,9 @@ c. Write SQL queries :
 
 3. **Create a Branch**: Create a new branch on my local repository (steptech_assignment) using the git branch command. Branches allow you to isolate your changes from the main codebase.
 
-4. ** Switch to the Branch**: Switch to the newly created branch using the git checkout command.
+4. **Switch to the Branch**: Switch to the newly created branch using the git checkout command.
 
-5. ** Make Changes**: Make the necessary changes to the project files using VS Code
+5. **Make Changes**: Make the necessary changes to the project files using VS Code
 
 6. **Commit Changes**: Use the git add command to stage the changes, and then commit them using the git commit command. Provide a descriptive commit message that explains the changes.
 
